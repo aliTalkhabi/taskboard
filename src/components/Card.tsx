@@ -2,7 +2,7 @@ import { DeleteIcon, EditIcon } from "@/utils/icons";
 
 const Card = () => {
   return (
-    <div className="border-2 border-black rounded-2xl mx-auto my-2 w-11/12 flex flex-wrap p-2">
+    <div className="border-2 border-slate-500 rounded-2xl mx-auto my-2 flex flex-wrap p-2">
       <div className="border-2 border-blue-400 w-full p-2">
         <div className="flex justify-between items-center">
           <p className="text-base">نام تسک</p>
