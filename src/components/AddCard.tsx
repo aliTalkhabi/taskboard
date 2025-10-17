@@ -7,7 +7,8 @@ const AddCard = () => {
   return (
     <>
       <Link href={'/cards/new'} className="w-full  flex justify-center items-center my-2 rounded bg-lime-100 p-2 cursor-pointer">
-        <AddIcon className="text-3xl" />
+        <AddIcon className="text-3xl ml-4" />
+        <span className="text-xl">افزودن کار جدید</span>
       </Link>
     </>
   );

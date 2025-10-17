@@ -53,7 +53,7 @@ const Card = ({ card }: Props) => {
             </select>
           </div>
         </div>
-        <p className="h-10 border-gray-100 bg-gray-200 rounded text-xs p-2">
+        <p className="h-10 border-gray-100 bg-gray-200 rounded text-xs p-2 line-clamp-2 break-words my-4">
           {description ?? "فاقد توضیحات"}
         </p>
       </div>
