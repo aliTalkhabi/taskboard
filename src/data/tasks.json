@@ -2,25 +2,25 @@
   "cards": [
     {
       "id": "Card-1",
-      "status":"todo",
+      "status": "todo",
       "title": "طراحی صفحه داشبورد",
       "description": "در این کار باید صفحه داشبورد طراحی کنید"
     },
     {
       "id": "Card-2",
-      "status":"todo",
+      "status": "todo",
       "title": "طراحی صفحه لاگین",
       "description": "در این کار باید صفحه لاگین طراحی کنید"
     },
     {
       "id": "Card-3",
-      "status":"inwork",
+      "status": "inwork",
       "title": "طراحی صفحه پرداخت  ",
       "description": "در این کار باید صفحه پرداخت طراحی کنید"
     },
     {
       "id": "Card-4",
-      "status":"done",
+      "status": "done",
       "title": "طراحی صفحه پنل کاربر",
       "description": "در این کار باید صفحه کاربر طراحی کنید"
     }
