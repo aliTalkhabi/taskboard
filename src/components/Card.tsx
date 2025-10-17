@@ -3,7 +3,7 @@ import { DeleteIcon, EditIcon } from "@/utils/icons";
 import { Card as CardTypes } from "@/types";
 import Link from "next/link";
 import React, { useState } from "react";
-import { updateCard } from "@/utils/api";
+import { deleteCard, updateCard } from "@/utils/api";
 
 type Props = {
   card: CardTypes;
@@ -18,11 +18,21 @@ const Card = ({ card }: Props) => {
   async function onStatusChange(e: React.ChangeEvent<HTMLSelectElement>) {
     const newStatus = e.target.value as CardTypes["status"];
     setChangeStatus(newStatus);
-    try{
-      await updateCard(id ,{status:newStatus})
+    try {
+      await updateCard(id, { status: newStatus });
       window.dispatchEvent(new Event("cards-updated"));
-    }catch(err){
-        console.error(err)
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  async function onDelete() {
+    if (!confirm("آیا از حذف این تسک مطمئن هستید؟")) return;
+    try {
+      await deleteCard(id);
+      window.dispatchEvent(new Event("cards-updated"));
+    } catch (err) {
+      console.error(err);
     }
   }
   return (
@@ -56,7 +66,9 @@ const Card = ({ card }: Props) => {
         </Link>
         <span>
           <EditIcon className="mx-2 my-1 text-yellow-800" />
-          <DeleteIcon className="mx-2 my-1 text-red-800" />
+          <button onClick={onDelete} aria-label="delete">
+            <DeleteIcon className="mx-2 my-1 text-red-800" />
+          </button>
         </span>
       </div>
     </div>
