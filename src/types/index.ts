@@ -4,10 +4,11 @@ export type BoardProps = {
 
 export type Card = {
   id: string;
-  columnId: string;
+  status?: "todo" | "inwork" | "done";
   title: string;
   description?: string;
   order?: number;
 };
+
 
 

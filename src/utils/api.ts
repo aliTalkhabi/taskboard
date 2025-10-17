@@ -33,7 +33,7 @@ export async function createCard(payload:Omit<Card,"id">):Promise<Card>{
     return res.json();
 }
 
-export async function updateCard(id:'string',patch:Partial<Card>):Promise<Card>{
+export async function updateCard(id:string,patch:Partial<Card>):Promise<Card>{
     const res = await fetch(`${BASE_URL}/cards/${encodeURIComponent(id)}`,{
         method:"PATCH",
         headers:HEADERS,
