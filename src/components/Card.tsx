@@ -62,10 +62,11 @@ const Card = ({ card }: Props) => {
           href={`/cards/${encodeURIComponent(id)}`}
           className="text-xs px-2 py-1 rounded bg-green-300"
         >
+          <EditIcon className="mx-2" />
           مشاهده جزییات
         </Link>
         <span>
-          <EditIcon className="mx-2 my-1 text-yellow-800" />
+          
           <button onClick={onDelete} aria-label="delete">
             <DeleteIcon className="mx-2 my-1 text-red-800" />
           </button>
