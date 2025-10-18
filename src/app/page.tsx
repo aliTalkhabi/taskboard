@@ -1,4 +1,5 @@
 import Board from "@/components/Board";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -7,6 +8,9 @@ export default function Home() {
         <Board type={'done'}/>
         <Board type={'inwork'}/>
         <Board type={'todo'}/>
+        <div className="absolute top-2 right-2 bg-cyan-500 text-xl text-white px-4 py-2 rounded-3xl" >
+          <Link href={'/about'}>راهنمای پروژه</Link>
+        </div>
       </div>
     </section>
   );
